@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Rubik',
+		sans-serif;
+	background: #f1f1d9bc;
+}
+
+
+.wrapper{
+	width: 100%;
+}
+
+.container{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.container .part1{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.part1 .form{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.318);
+	top: 25%;
+	position: fixed;
+	padding: 20px;
+	border-radius: 15px;
+	width: 450px;
+	height: 450px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;	
+}
+
+.form .formHeader h2{
+	font-size: 35px;
+	font-weight: 500;
+	color: goldenrod;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.153);
+}
+
+.formBody {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.formBody label{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.formBody label span{
+	font-size: 19px;
+	color: #6e5006;
+}
+
+.formBody label input{
+	padding: 5px 15px;
+	border-radius: 15px;
+	background: #e8e8e5bc;
+	outline: none;
+	border: 1px solid #e8e8e5bc;
+	font-size: 17px;
+}
+
+.formFooter button{
+	padding: 7px 50px;
+	border-radius: 15px;
+	border: 1px solid goldenrod;
+	background: transparent;
+	color: goldenrod;
+	font-size: 17px;
+	transition: .3s;
+}
+
+.formFooter button:hover{
+	background: goldenrod;
+	color: whitesmoke;
+	box-shadow: 0 0 15px rgba(218, 165, 32, 0.772);
+}
+
+.logoutBtn{
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	padding: 7px 30px;
+	border-radius: 5px;
+	border: 1px solid #413006;
+	color: #413006;
+	background: transparent;
+	font-size: 16px;
+	z-index: 10;
+	transition: .2s;
+}
+
+.logoutBtn:hover{
+	background: #6e5006;
+	color: whitesmoke;
+
+}
+
+.container .part2{
+	padding: 20px;
+	width: 65%;
+	border-radius: 15px;
+	margin: 10px 0;
+	border: 3px solid gold;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.653);
+	background: rgba(138, 104, 10, 0.867);
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.part2 .card{
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.54);
+	margin: 20px 0;
+	width: 320px;
+	height: 300px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background: rgb(255, 249, 216);
+}
+
+.part2 .card .cardHeader{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.cardHeader h2{
+	font-size: 27px;
+	color: #413006;
+	font-weight: 600;
+}
+
+.card .cardBody{
+	width: 90%;
+	margin: 0 auto;
+	max-height: 50%;
+	overflow-y: auto;
+}
+
+.card .cardBody p{
+	text-align: center;
+}
+
+.cardFooter{
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.cardFooter img{
+	width: 40px;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.cardFooter img:hover{
+	transform: scale(120%);
+}
+
+.redBorder{
+	border: 1px solid #bb0000  !important;  
+}
+
+.editModal{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.658);
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.editModal.active{
+	display: flex;
+}
+
+.modalForm{
+	padding: 20px;
+	background: #fff;
+	width: 420px;
+	height: 350px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.modalHeader{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.modalHeader h3{
+	font-size: 25px;
+	font-weight: 500;
+	color: #6e5006;
+}
+
+.modalHeader span{
+	position: absolute;
+	right: 0.2rem;
+	top: -2.5rem;
+	font-size: 33px;
+	cursor: pointer;
+}
+
+.modalBody{
+	display: flex;
+	width: 90%;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+}
+
+.modalBody label{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.modalBody label span{
+	font-size: 17px;
+	color: #413006;
+}
+
+.modalBody label input{
+	padding: 3px 10px;
+	font-size: 16px;
+	border-radius: 15px;
+	border: 1px solid #6e5006;
+	outline: none;
+	background: #f5f3f3cb;
+}
+
+.modalFooter{
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.modalFooter button{
+	padding: 5px 15px;
+	border-radius: 5px;
+	background: whitesmoke;
+	font-size: 16px;
+	z-index: 10;
+}
+
+.modalFooter .cancelChanging{
+	border: 1px solid #9b0404;
+	color: #9a0a0a;
+	transition: 0.3s;
+}
+
+.modalFooter .cancelChanging:hover{
+	background: #9a0a0a;
+	color: whitesmoke;
+	box-shadow: 0 0 10px #9a0a0a80;
+}
+
+.modalFooter .submitChanging{
+	border: 1px solid #9b9b04;
+	color: #7f7600;
+	transition: 0.3s;
+}
+
+.modalFooter .submitChanging:hover{
+	background: #7f7600;
+	color: whitesmoke;
+	box-shadow: 0 0 10px #7f770094;
+}
+
+
+@media (max-width: 1441px) {
+	.part1 .form{
+		width: 350px;
+	}
+	.formBody{
+		width: 95%;
+	}
+	.formBody label input{
+		width: 60%;
+	}
+}
+
+@media (max-width: 1025px) {
+	.container{
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.container .part1{
+		width: 100%;
+		margin-top: 40px;
+	}
+
+	.formBody label input {
+		width: 65%;
+	}
+	.part1 .form{
+		position: relative;
+		padding: 20px;
+		border-radius: 15px;
+		width: 450px;
+		height: 450px;
+		background: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.container .part2{
+		width: 90%;
+	}
+}
+@media (max-width: 769px) {
+	.container .part2{
+		width: 85%;
+	}
+}
+@media (max-width: 426px) {
+	.part1 .form{
+		width: 85%;
+		height: 400px;
+	}
+
+	.container .part2{
+		width: 90%;
+	}
+
+	.formBody label span{
+		font-size: 17px;
+	}
+	.formBody label input{
+		font-size: 14px;
+	}
+
+	.form .formHeader h2{
+		font-size: 29px;
+	}
+
+	.formFooter button{
+		font-size: 14px;
+	}
+	.part2 .card{
+		width: 300px;
+		height: 250px;
+	}
+	.cardHeader h2{
+		font-size: 23px;
+	}
+	.cardHeader span{
+		font-size: 14px;
+	}
+	.card .cardBody p{
+		font-size: 15px;
+	}
+
+	.modalForm{
+		width: 90%;
+	}
+
+	.modalBody label span{
+		font-size: 16px;
+	}
+
+	.modalBody label input{
+		width: 60%;
+	}
+}
+@media (max-width: 376px) {
+	.part1 .form{
+		height: 420px;
+	}
+	.formBody{
+		gap: 10px;
+	}
+	.formBody label{
+		flex-direction: column;
+		gap: 7px;
+		justify-content: center;
+	}
+	.formBody label input{
+		width: 90%;
+		margin: 0 auto;
+	}
+	.modalForm {
+		width: 90%;
+		height: 400px;
+	}
+
+	.modalBody label{
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 5px;
+	}
+	
+	.modalBody label input {
+		width: 90%;
+	}
+} 

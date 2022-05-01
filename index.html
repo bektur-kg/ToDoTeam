@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do</title>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<div class="wrapper">
+				<div class="container">
+					<button class="logoutBtn">Logout</button>
+
+					<div class="part1">
+						<form class="form">
+							<div class="formHeader">
+								<h2>Add Todo</h2>
+							</div>
+							<div class="formBody">
+								<label>
+									<span>Title</span>
+									<input type="text" class="inputTitle" name="title" />
+								</label>
+								<label>
+									<span>Description</span>
+									<input type="text" class="inputDesc" name="description" />
+								</label>
+								<label>
+									<span>Date</span>
+									<input type="date" class="inputDate" name="date" />
+								</label>
+							</div>
+							<div class="formFooter">
+								<button class="addTodoBtn" type="submit">Add</button>
+							</div>
+						</form>
+					</div>
+					<div class="part2"></div>
+					<div class="editModal">
+						<form class="modalForm">
+							<div class="modalHeader">
+								<h3>Editing Todo</h3>
+								<span>&times;</span>
+							</div>
+							<div class="modalBody">
+								<label>
+									<span>Title</span>
+									<input type="text" class="modalTitle" name="title" />
+								</label>
+								<label>
+									<span>Description</span>
+									<input type="text" class="modalTitle" name="description" />
+								</label>
+								<label>
+									<span>Date</span>
+									<input type="date" class="modalTitle" name="date" />
+								</label>
+							</div>
+							<div class="modalFooter">
+								<button class="submitChanging" type="submit">OK</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer></footer>
+		<script src="/js/script.js"></script>
+	</body>
+</html>

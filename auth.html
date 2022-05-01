@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do Auth</title>
+		<link rel="stylesheet" href="/css/auth.css" />
+	</head>
+	<body>
+		<section class="registration">
+			<div class="registerContainer">
+				<div class="errorResponse">
+					<span></span>
+				</div>
+				<form class="form">
+					<div class="formHeader">
+						<h2>Login</h2>
+					</div>
+					<div class="formBody">
+						<label>
+							<span>Username</span>
+							<input
+								type="text"
+								name="username"
+								class="username"
+								pattern="^[\w.@+-]+$"
+							/>
+						</label>
+						<label>
+							<span>Password</span>
+							<input type="password" name="password" class="password" />
+							<img
+								class="seePassword"
+								width="25px"
+								src="https://cdn-icons-png.flaticon.com/512/65/65000.png?w=360"
+								alt=""
+							/>
+						</label>
+					</div>
+					<div class="formFooter">
+						<button class="submitBtn" type="submit">login</button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<script src="/js/auth.js"></script>
+	</body>
+</html>

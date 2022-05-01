@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	list-style: none;
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Rubik',
+	sans-serif;
+	background: #f1f1d9bc;
+}
+
+.registerContainer{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.form{
+	width: 400px;
+	height: 400px;
+	padding: 20px;
+	border-radius: 10px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.errorResponse{
+	background: #e5391a;
+	padding: 10px 15px;
+	color: whitesmoke;
+	border-radius: 10px;
+	display: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.324);
+}
+
+.form .formHeader h2{
+	font-size: 27px;
+	font-weight: 500;
+	color: #bc7a00;
+}
+
+.form .formBody{
+	width: 90%;
+	height: 60%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.formBody label {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.formBody label input{
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: 0;
+	outline: 0;	
+	background: #dad5d5a0;
+	font-size: 16px;
+}
+
+.formFooter button{
+	padding: 7px 20px;
+	border-radius: 5px;
+	border: 1px solid orange;
+	outline: 0;
+	background: orange;
+	color: whitesmoke;
+	font-size: 16px;
+}
+
+.formFooter button:hover{
+	border: 1px solid orange;
+	color: orange;
+	background:transparent;
+	box-shadow: 0 0 5px #845704a2;
+}
+
+.seePassword{
+	position: absolute;
+	right: 5px;
+	bottom: 1px;
+}
