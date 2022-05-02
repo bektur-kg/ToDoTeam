@@ -76,6 +76,12 @@ body{
 	font-size: 16px;
 }
 
+.formFooter{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
 .formFooter button{
 	padding: 7px 20px;
 	border-radius: 5px;

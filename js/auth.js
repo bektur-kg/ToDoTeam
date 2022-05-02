@@ -35,6 +35,11 @@ $submit.addEventListener('click', (e) => {
 	}
 })
 
+window.addEventListener('load', () => {
+	const USER_ID = localStorage.getItem('userId')
+	!USER_ID && open('../register.html', '_self')
+})
+
 function getInputValues() {
 	return [...$inputs].reduce((body, input) => {
 		return { ...body, [input.name]: input.value.trim() }
